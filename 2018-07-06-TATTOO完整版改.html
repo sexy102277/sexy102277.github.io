@@ -369,17 +369,19 @@
 			padding: 100px 0 0 0;
 			line-height: 70px;
 		}
-#boxl{
-	width: 100%;
-	height: 800px;
-	background-color: #000
-}
+
+		#boxl {
+			width: 100%;
+			height: 700px;
+			background-color: #000
+		}
+
 		#swiper2-container {
 			width: 80%;
 			height: 700px;
-	margin: 0 0 10px 150px;
-	
-			
+			margin: 0 0 10px 150px;
+
+
 		}
 
 		.swiper-slide {
@@ -399,6 +401,42 @@
 			align-items: center;
 			margin: 0;
 			background-size: cover;
+		}
+
+		#boxi {
+			width: 80%;
+			height: 500px;
+			padding: 0 0 0 150px;
+
+
+		}
+
+		.boxi1 {
+			height: 80px;
+			color: #fff;
+			font-size: 25px;
+			background-color: rgba(66, 15, 15, 0.233);
+		}
+		#boxm{
+			width:100%;
+			height: 600px;
+			font-size: 30px;
+			background-color: rgba(61, 55, 55, 0.356);
+		}
+		#boxm > a{
+			color: #fff;
+			float: right;
+		}
+		#boxm > a:hover{
+			color: rgba(153, 131, 143, 0.747);
+		} 
+		.boxm2{
+			width: 480px;
+			height: 350px;
+			background-image: url("img2/1532681663563.jpg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			float: left;
 		}
 	</style>
 </head>
@@ -592,38 +630,56 @@
 					<div class="swiper-pagination"></div>
 				</div>
 			</div>
+			<h1 class="text" style="font-family:DFKai-sb;">保養方法</h1>
+			<div id="boxi" style="font-family:DFKai-sb;">
+				<p class="boxi1">第1 選擇了不專業的刺青師，不專業的刺青師會教你錯誤的觀念或根本不教。而另一種可能就是刺青技術不夠純熟時，在刺青的過程中刺過頭，造成皮膚嚴重受損，就容易造成發炎。</p>
+				<p class="boxi1">第2 沒有正確清潔傷口，造成傷口感染發炎。</p>
+				<p class="boxi1">第3 在傷口還沒完全復原時去了泡澡、泡溫泉、海水浴場，泳池或過度曝曬有陽光的地方，而造成皮膚不適。</p>
+				<p class="boxi1">第4 擦了一些來路不明的藥膏或者一般有化學香精的乳膏，千萬不要用酒精或市售傷口復原藥都不要亂擦。</p>
+				<p class="boxi1">第5 刺青傷口長期在髒亂環境下也容易受到感染發炎，刺青完後要注意所處環境的整潔，同時在傷口沒有完全復原前也不要隨意給人觸摸或接觸寵物。</p>
+			</div>
+			<div id="boxm" style="font-family:DFKai-sb;">
+				<div class="boxm2"></div>
+				<a href="http://www.tattoo.org.tw/" style="text-decoration: none" class="boxm1"><p> 2019　台灣高雄國際紋身展</p></a>
+				<a href="https://taipeitattooshow.com/" style="text-decoration: none" class="boxm1"><p>2018　台灣台北國際紋身展</p></a>
+				<a href="https://www.stjohnstattooconvention.com/" style="text-decoration: none" class="boxm1"><p>2018　加拿大聖約翰文身大會</p></a>
+				<a href="https://www.leedstattooexpo.com/" style="text-decoration: none" class="boxm1"><p>2018　英國第五屆利茲國際紋身博覽會</p></a>
+				<a href="https://www.tattoo-convention.de/" style="text-decoration: none" class="boxm1"><p>2018　德國第28屆柏林紋身大會</p></a>
+			</div>
 
+
+			<iframe src="" frameborder="0"></iframe>
 		</div>
 
 
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
-			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-			<script>
-				AOS.init();
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
 
-				var swiper = new Swiper(' #seastion1-swiper', {
-					pagination: {
-						el: '.swiper-pagination',
-						clickable: true,
-						renderBullet: function (index, className) {
-							return '<span class="' + className + '">' + (index + 1) + '</span>';
-						},
+			var swiper = new Swiper(' #seastion1-swiper', {
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+					renderBullet: function (index, className) {
+						return '<span class="' + className + '">' + (index + 1) + '</span>';
 					},
-				});
-			</script>
-			<script>
-				var swiper = new Swiper('#swiper2-container', {
-					direction: 'vertical',
-					slidesPerView: 1,
-					spaceBetween: 60,
-					mousewheel: true,
-					pagination: {
-						el: '.swiper-pagination',
-						clickable: true,
-					},
-				});
-			</script>
+				},
+			});
+		</script>
+		<script>
+			var swiper = new Swiper('#swiper2-container', {
+				direction: 'vertical',
+				slidesPerView: 1,
+				spaceBetween: 60,
+				mousewheel: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			});
+		</script>
 
 
 </body>
