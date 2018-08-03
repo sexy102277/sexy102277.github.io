@@ -6,6 +6,8 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+	    crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		/*最上面*/
@@ -48,7 +50,11 @@
 			padding: 50px 0;
 		}
 
-		.menudeco {
+		#menu .hamburger-menu {
+			display: none;
+		}
+
+		.deco {
 			width: 1px;
 			height: 33px;
 			background: #DDDDDD
@@ -117,7 +123,7 @@
 
 		.boxb {
 			width: 80%;
-			height: 200px;
+			height: 220px;
 			background-color: rgba(255, 255, 255, 0.1);
 			color: #fff;
 			margin: 0 auto;
@@ -360,10 +366,10 @@
 
 		#swiper2-container {
 			width: 80%;
-			height: 400px;
+			height: 900px;
 		}
 
-		.swiper-slide {
+		#swiper2-container.swiper-slide {
 			background: #000;
 			/* Center slide text vertically */
 			-webkit-box-pack: center;
@@ -376,13 +382,13 @@
 			align-items: center;
 			margin: 0;
 			background-size: cover;
+			height: 100%;
 		}
 
 		/*保養方法*/
 
 		#boxi {
 			width: 80%;
-
 			padding: 0 0 0 150px;
 		}
 
@@ -468,17 +474,30 @@
 			width: 25%;
 		}
 
-		.mb-1{
+		.mb-1 {
 			display: none;
 		}
 
+		.nav-toggle {
+			display: none;
+		}
+
+
 		@media screen and (max-width:768px) {
+			.nav-toggle {
+				display: block;
+				position: absolute;
+				right: 15px;
+				top: 30px;
+
+			}
 			#nav {
 				width: 100%;
 				float: none;
 			}
 			#menu ul {
 				float: none;
+
 			}
 			#logo {
 				position: static !important;
@@ -522,12 +541,12 @@
 			}
 			.boxv1 {
 				width: 100%;
-				padding:0;
+				padding: 0;
 			}
 
 			.boxz1 {
 				width: 100%;
-				padding:0;
+				padding: 0;
 			}
 			#main {
 				width: 100%;
@@ -543,19 +562,57 @@
 			.boxf-1 {
 				height: auto;
 			}
-			#seastion1-swiper .swiper-slide{
+			#seastion1-swiper .swiper-slide {
 				height: 200px;
 				display: block;
+				background-color: #000
 			}
-			.swiper-container{
+			#swiper2-container.swiper-slide{
+				height: 100% !important;
+			}
+			#swiper2-container {
 				height: 220px;
 			}
-			.cover1{
+			.swiper-container {
+				height: 220px;
+			}
+			.cover1 {
 				display: none;
 			}
-			.mb-1{
-			display: block;
-		}
+			.mb-1 {
+				display: block;
+				color: #fff;
+			}
+			#menu {
+				width: 100%;
+				background: none;
+				border: none;
+				display: none;
+			}
+			#menu.active{
+				display: block;
+			}
+			.deco {
+display: none;
+			}
+			.hamburger-menu {
+				display: block;
+			}
+			#boxg{
+				background-size: contain;
+				height: 200px;
+			}
+			.cover{
+				display: none;
+			}
+			#menu ul li{
+				margin: 0 50px;
+				float: right;
+				background-color: #000;
+				border-radius: 10px;
+
+			}
+
 		}
 	</style>
 </head>
@@ -564,50 +621,49 @@
 	<div class="all">
 		<button id="backtop">Top</button>
 		<div id="nav">
-			<i class="far fa-bars"></i>
+			<i class="fas fa-bars fa-2x nav-toggle" id="nav-toggle" style="color: #fff"></i>
 			<div id="logo"></div>
-			<div id="menu" span style="font-family:DFKai-sb;">
+			<div id="menu" class="nav_menu" span style="font-family:DFKai-sb;">
 				</span>
 				<ul>
-					<li class="menudeco"></li>
+					<li class="deco"></li>
 					<li>
 						<a href="#1">紋身文化與由來</a>
 					</li>
-					<li class="menudeco"></li>
+					<li class="deco"></li>
 					<li>
 						<a href="#2">紋身位置</a>
 					</li>
-					<li class="menudeco"></li>
+					<li class="deco"></li>
 					<li>
 						<a href="#3">紋身歷史</a>
 					</li>
-					<li class="menudeco"></li>
+					<li class="deco"></li>
 					<li>
 						<a href="#4">紋身風格</a>
 					</li>
-					<li class="menudeco"></li>
+					<li class="deco"></li>
 					<li>
 						<a href="#5">紋身三大分類</a>
 					</li>
-					<li class="menudeco"></li>
+					<li class="deco"></li>
 					<li>
 						<a href="#6">紋身注意事項</a>
 					</li>
-					<li class="menudeco"></li>
+					<li class="deco"></li>
 					<li>
 						<a href="#7">保養方法</a>
 					</li>
-					<li class="menudeco"></li>
+					<li class="deco"></li>
 					<li>
 						<a href="#8">展覽與影集</a>
 					</li>
-					<li class="menudeco"></li>
-
 				</ul>
 			</div>
+
 		</div>
 		<div id="main"></div>
-		<div id="menu">
+		<div id="menu-1">
 			<h1 class="text" style="font-family:DFKai-sb;" id="1">紋身文化</h1>
 			<div class="boxc">
 				<div class="boxa-1"></div>
@@ -649,11 +705,11 @@
 		<div class="cover" span style="font-family:DFKai-sb">冰河時期，也就是西元前八千年以前，在世界多處的岩洞，包括法國葡萄牙，羅馬尼亞和斯堪地那維亞半島，發現許多有紅黑顏料痕蹟的陶碗，和一些用鹿角和其他碎骨做成的尖骨，以及幾個帶有強烈紋身暗示的小雕像。 文身從古至今，在世界各地都有著悠久的歷史，文身可能始於一萬四千年以前的石器時代。埃及的金字塔是第一個歷史的證據，內有存放超過四千年的木乃伊，男女貴族身上各刻有明顯的文身傑作。
 			刺青的歷史可追溯至古埃及，在出土的人像裡，有類似刺青的裝飾。埃及中王國時期(前2133－1786年)的女祭司，阿瑪屋奈特(Amunet)木乃伊，身上擁有著被認為是象徵性慾和生育能力的刺青。
 		</div>
-		<div class="img">
-		</div>
-		<div class="clear"></div>
-	</div>
 
+	</div>
+	<div class="mb-1" span style="font-family:DFKai-sb">冰河時期，也就是西元前八千年以前，在世界多處的岩洞，包括法國葡萄牙，羅馬尼亞和斯堪地那維亞半島，發現許多有紅黑顏料痕蹟的陶碗，和一些用鹿角和其他碎骨做成的尖骨，以及幾個帶有強烈紋身暗示的小雕像。 文身從古至今，在世界各地都有著悠久的歷史，文身可能始於一萬四千年以前的石器時代。埃及的金字塔是第一個歷史的證據，內有存放超過四千年的木乃伊，男女貴族身上各刻有明顯的文身傑作。
+		刺青的歷史可追溯至古埃及，在出土的人像裡，有類似刺青的裝飾。埃及中王國時期(前2133－1786年)的女祭司，阿瑪屋奈特(Amunet)木乃伊，身上擁有著被認為是象徵性慾和生育能力的刺青。
+	</div>
 	<h1 class="text" style="font-family:DFKai-sb;" id="4">紋身風格</h1>
 	<div class="seastion1">
 		<div class="swiper-container" id="seastion1-swiper">
@@ -668,12 +724,12 @@
 						</p>
 					</div>
 
-					<div class="mb-1">
-							<p style="color: #fff">美式風格</p>
-							<p style="color: #fff">
-								從愛國的精神、圖騰到叛逆的個性宣言，刺青一直沒閒著，在美國，每 5 個人當中就有一個人有刺青，其中接近 90% 的人對刺青從不後悔。美國人也不是天生愛刺青的，在美國西部，刺青甚至曾經一是種禁忌，也是經過了一段時間的演變，人們才逐漸接受了這刺青這件事。儘管當時美國海軍並不贊同大家紋身，但紋身是很多西方士兵和水手們的
-								「身份 ID」，擊敗了多少敵人，就有多少紋身， 萬一犧牲在戰場上也能辨別屍體，也許就是從那時開始 「叛逆」 起來的。
-							</p>
+					<div class="mb-1" style="font-family:DFKai-sb;">
+						<p style="color: #fff">美式風格</p>
+						<p style="color: #fff">
+							從愛國的精神、圖騰到叛逆的個性宣言，刺青一直沒閒著，在美國，每 5 個人當中就有一個人有刺青，其中接近 90% 的人對刺青從不後悔。美國人也不是天生愛刺青的，在美國西部，刺青甚至曾經一是種禁忌，也是經過了一段時間的演變，人們才逐漸接受了這刺青這件事。儘管當時美國海軍並不贊同大家紋身，但紋身是很多西方士兵和水手們的
+							「身份 ID」，擊敗了多少敵人，就有多少紋身， 萬一犧牲在戰場上也能辨別屍體，也許就是從那時開始 「叛逆」 起來的。
+						</p>
 					</div>
 				</div>
 
@@ -686,6 +742,13 @@
 
 						</p>
 					</div>
+					<div class="mb-1" style="font-family:DFKai-sb;">
+						<p style="color: #fff">台式風格</p>
+						<p style="color: #fff">
+							中國的傳統儒家文化→所謂「身體發膚，受之父母，不得損傷。」在身上紋身是一種大不敬的行為，曾幾何時，紋身還是一種刑罰。在早期的台灣，刺青被視為罪犯、次文化的記號，是社會邊緣人的圖騰行為。至今包括臺灣泰雅族和賽夏族之內，世界許多地方的原住民，都有在面部刺青的傳統，在許多文化中，刺青還是一種社會階級與地位的象徵。
+
+						</p>
+					</div>
 				</div>
 
 				<div class="swiper-slide" style="font-family:DFKai-sb;">
@@ -694,8 +757,12 @@
 						<p class="text-top" style="color: #fff">日式風格</p>
 						<p class="s1-text" style="color: #fff">
 							日文的「入墨(irezumi)」、「彫物(horimono)」、「刺青(shisei)」、「タトゥー」都是刺青的意思和風圖樣的刺青一般都被稱為和雕(wabori)。江戶時代，刺青是對罪犯的逞罰。江戶時代的性工作者被稱為游女。 對常常照顧他們的恩客，她們用刺青來表達感謝之意。這樣的刺青被稱為入墨子(irezumiko)，開頭是恩客的名字，結尾則是「命(inochi)」。
-
-
+						</p>
+					</div>
+					<div class="mb-1">
+						<p style="color: #fff">日式風格</p>
+						<p style="color: #fff">
+							日文的「入墨(irezumi)」、「彫物(horimono)」、「刺青(shisei)」、「タトゥー」都是刺青的意思和風圖樣的刺青一般都被稱為和雕(wabori)。江戶時代，刺青是對罪犯的逞罰。江戶時代的性工作者被稱為游女。 對常常照顧他們的恩客，她們用刺青來表達感謝之意。這樣的刺青被稱為入墨子(irezumiko)，開頭是恩客的名字，結尾則是「命(inochi)」。
 						</p>
 					</div>
 				</div>
@@ -708,9 +775,14 @@
 							<h3 class="s1-text" style="color: #fff"> ※ 您不知道的泰國紋身文化神秘紋身節 ※</h3>
 							<p class="s1-text" style="color: #fff"> 在離泰國曼谷56公里的佛統府，每到三月，一年一度的泰國紋身節在WatBangPhra廟舉行。 紋身節期間，有數千名泰國男子來到佛統紋身。他們相信紋身具有神秘的力量，可以驅魔避邪在泰國無論是在首都曼谷、南部旅遊城市普吉或北方清新小鎮清邁，還是在海濱小城華欣「TATTOO」
 								( 紋身）店比比皆是，每家都能提供上千種圖案供愛泰旅者們選擇。 紋身對於許多年輕人來說，紋身是獨特個性及自我的一種體現，許多人迷戀上這種疼痛的美麗，並將其視為性感和魅力的象徵，而在全民信仰佛教的泰國紋身也被賦予了一層神秘的宗教意義。
-
-
 							</p>
+					</div>
+					<div class="mb-1">
+						<p style="color: #fff">泰式風格</p>
+						<p style="color: #fff">
+							在離泰國曼谷56公里的佛統府，每到三月，一年一度的泰國紋身節在WatBangPhra廟舉行。 紋身節期間，有數千名泰國男子來到佛統紋身。他們相信紋身具有神秘的力量，可以驅魔避邪在泰國無論是在首都曼谷、南部旅遊城市普吉或北方清新小鎮清邁，還是在海濱小城華欣「TATTOO」
+							( 紋身）店比比皆是，每家都能提供上千種圖案供愛泰旅者們選擇。 紋身對於許多年輕人來說，紋身是獨特個性及自我的一種體現，許多人迷戀上這種疼痛的美麗，並將其視為性感和魅力的象徵，而在全民信仰佛教的泰國紋身也被賦予了一層神秘的宗教意義。
+						</p>
 					</div>
 				</div>
 
@@ -719,7 +791,13 @@
 					<div class="cover1" style="font-family:DFKai-sb;">
 						<p class="text-top" style="color: #fff">韓式風格</p>
 						<p class="s1-text" style="color: #fff">
-
+							朝鮮傳統、當代復甦，南韓的非法藝術。韓國娛樂產業近年席捲世界各地，大膽創新的風格也常為時尚潮流界帶來主流新風向。刺青作為次文化的藝術象徵，但在藝術產業強權的韓國當地，傳統的汗蒸幕設有刺青禁止入浴、藝人若刺青得穿長袖上節目的硬性規定，經營刺青店甚至被視為非法。
+							韓國傳統文化為創作題材，以鮮明的粗線勾邊、不複雜的大氣構圖、加上點陣或強烈對比的漸層打霧，重新演繹朝鮮傳統美學。
+						</p>
+					</div>
+					<div class="mb-1">
+						<p style="color: #fff">韓式風格</p>
+						<p style="color: #fff">
 							朝鮮傳統、當代復甦，南韓的非法藝術。韓國娛樂產業近年席捲世界各地，大膽創新的風格也常為時尚潮流界帶來主流新風向。刺青作為次文化的藝術象徵，但在藝術產業強權的韓國當地，傳統的汗蒸幕設有刺青禁止入浴、藝人若刺青得穿長袖上節目的硬性規定，經營刺青店甚至被視為非法。
 							韓國傳統文化為創作題材，以鮮明的粗線勾邊、不複雜的大氣構圖、加上點陣或強烈對比的漸層打霧，重新演繹朝鮮傳統美學。
 						</p>
@@ -852,6 +930,10 @@
 				scrollTop: 0
 			}, 'slow');
 			return false;
+		})
+
+		$("#nav-toggle").click(function () {
+			$(".nav_menu").toggleClass("active");
 		})
 	</script>
 	<script>
